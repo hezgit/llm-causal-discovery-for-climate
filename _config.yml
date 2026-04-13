@@ -1,0 +1,9 @@
+title: Research Project
+description: Research project website
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - vendor
+  - .bundle

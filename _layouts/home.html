@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta
+      name="description"
+      content="{{ page.subtitle | default: site.description | escape }}"
+    >
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Research Project</p>
+        <h1>{{ page.title | default: site.title }}</h1>
+        {% assign contributors = page.authors | default: page.team %}
+        {% if page.subtitle %}
+          <p class="hero-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+        {% if contributors %}
+          <p class="hero-meta">{{ contributors }}</p>
+        {% endif %}
+        {% if page.hero_links and page.hero_links.size > 0 %}
+          <nav class="hero-links" aria-label="Project links">
+            {% for item in page.hero_links %}
+              <a href="{{ item.url }}">{{ item.label }}</a>
+            {% endfor %}
+          </nav>
+        {% endif %}
+      </header>
+
+      <main id="main-content">
+        <section class="section intro">
+          <div class="section-heading">
+            <p class="section-kicker">Overview</p>
+            <h2>Project Summary</h2>
+          </div>
+          <div class="prose">
+            {{ content }}
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="papers-title">
+          <div class="section-heading">
+            <p class="section-kicker">Outputs</p>
+            <h2 id="papers-title">Papers</h2>
+          </div>
+          {% if page.papers and page.papers.size > 0 %}
+            <div class="card-grid">
+              {% for paper in page.papers %}
+                <article class="card">
+                  <div class="card-body">
+                    <h3>{{ paper.title }}</h3>
+                    <p class="meta-line">
+                      {{ paper.authors }}
+                    </p>
+                    <p class="meta-line">
+                      {{ paper.venue }}{% if paper.year %}, {{ paper.year }}{% endif %}
+                    </p>
+                    {% if paper.award %}
+                      <p class="badge">{{ paper.award }}</p>
+                    {% endif %}
+                    {% if paper.note %}
+                      <p>{{ paper.note }}</p>
+                    {% endif %}
+                  </div>
+                  <div class="card-links">
+                    <a href="{{ paper.link }}">Publication</a>
+                    {% if paper.pdf %}
+                      <a href="{{ paper.pdf }}">PDF</a>
+                    {% endif %}
+                    {% if paper.code %}
+                      <a href="{{ paper.code }}">Code</a>
+                    {% endif %}
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="empty-state">Add paper entries in the front matter of <code>index.md</code>.</p>
+          {% endif %}
+        </section>
+
+        <section class="section" aria-labelledby="media-title">
+          <div class="section-heading">
+            <p class="section-kicker">Coverage</p>
+            <h2 id="media-title">Media Coverage</h2>
+          </div>
+          {% if page.media and page.media.size > 0 %}
+            <div class="stack">
+              {% for item in page.media %}
+                <article class="list-card">
+                  <div>
+                    <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+                    <p class="meta-line">{{ item.outlet }}{% if item.date %} | {{ item.date }}{% endif %}</p>
+                    {% if item.summary %}
+                      <p>{{ item.summary }}</p>
+                    {% endif %}
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="empty-state">Add media coverage entries in the front matter of <code>index.md</code>.</p>
+          {% endif %}
+        </section>
+
+        <section class="section" aria-labelledby="materials-title">
+          <div class="section-heading">
+            <p class="section-kicker">Resources</p>
+            <h2 id="materials-title">Other Materials</h2>
+          </div>
+          {% if page.materials and page.materials.size > 0 %}
+            <div class="stack">
+              {% for item in page.materials %}
+                <article class="list-card">
+                  <div>
+                    <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+                    <p class="meta-line">{{ item.type }}</p>
+                    {% if item.description %}
+                      <p>{{ item.description }}</p>
+                    {% endif %}
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+          {% else %}
+            <p class="empty-state">Add resource entries in the front matter of <code>index.md</code>.</p>
+          {% endif %}
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
