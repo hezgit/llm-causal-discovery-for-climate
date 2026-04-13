@@ -15,8 +15,8 @@ papers:
     year: 2026
     link: https://openreview.net/forum?id=e4VO3YlRBr
     pdf: https://openreview.net/pdf?id=e4VO3YlRBr
-    code: https://github.com/your-org/your-repo
-    award: Best Paper Honorable Mention
+    # code: https://github.com/your-org/your-repo
+    # award: Best Paper Honorable Mention
     note: Bayesain causal discovery for climate timeseries data.
 media:
   - title: Weather Predications by AI
