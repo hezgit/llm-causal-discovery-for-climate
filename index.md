@@ -2,28 +2,28 @@
 layout: home
 title: LLM Casual Discovery for Climate
 subtitle: Understanding how large language models support casual discovery of climate research, evidence, and public-facing knowledge.
-authors: CSIRO Data61 and Environment
+authors: Research Team Name
 hero_links:
   - label: GitHub Repository
     url: https://github.com/your-org/your-repo
   - label: Contact
     url: mailto:research@example.com
 papers:
-  - title: HiBaNG: Hierarchical Bayesian Nonparametric Granger Causal Discovery in Low-Data Regimes
-    authors: H. Zhao, V. Kitsios, T. O’kane, E. V. Bonilla
-    venue: Transactions on Machine Learning Research
+  - title: Example Paper Title
+    authors: Author One, Author Two, Author Three
+    venue: Conference or Journal Name
     year: 2026
-    link: https://openreview.net/forum?id=e4VO3YlRBr
-    pdf: https://openreview.net/pdf?id=e4VO3YlRBr
-    # code: https://github.com/your-org/your-repo
-    # award: Best Paper Honorable Mention
-    note: Bayesain causal discovery for climate timeseries data.
+    link: https://example.com/paper
+    pdf: https://example.com/paper.pdf
+    code: https://github.com/your-org/your-repo
+    award: Best Paper Honorable Mention
+    note: Brief note about the paper's contribution and relevance to the project.
 media:
-  - title: Weather Predications by AI
-    outlet: Weather Predications by AI
-    date: 2024-12-19
-    link: https://www.abc.net.au/listen/programs/nightlife/weather-predications-by-ai/104748008
-    summary: Weather forecasting is changing quickly with the advent of artificial intelligence into the prediction mix. Vassili Kitsios, Senior Research Scientist, Climate Forecasting, CSIRO, joined Philip Clark to discuss how the use of AI will help to achieve a better forecast.
+  - title: Example Media Coverage Headline
+    outlet: Example News Outlet
+    date: 2026-03-01
+    link: https://example.com/media-coverage
+    summary: Short summary of the article, interview, or coverage highlight.
 materials:
   - title: Project Dataset
     type: Dataset
