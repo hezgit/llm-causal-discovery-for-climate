@@ -9,15 +9,15 @@ hero_links:
   - label: Contact
     url: mailto:research@example.com
 papers:
-  - title: Example Paper Title
-    authors: Author One, Author Two, Author Three
-    venue: Conference or Journal Name
+  - title:  Hierarchical Bayesian Nonparametric Granger Causal Discovery in Low-Data Regimes
+    authors: H. Zhao, V. Kitsios, T. O’kane, E. V. Bonilla
+    venue: Transactions on Machine Learning Research
     year: 2026
-    link: https://example.com/paper
-    pdf: https://example.com/paper.pdf
-    code: https://github.com/your-org/your-repo
-    award: Best Paper Honorable Mention
-    note: Brief note about the paper's contribution and relevance to the project.
+    link: https://openreview.net/forum?id=e4VO3YlRBr
+    pdf: https://openreview.net/pdf?id=e4VO3YlRBr
+    # code: https://github.com/your-org/your-repo
+    # award: Best Paper Honorable Mention
+    note: Bayesain causal discovery for climate timeseries data.
 media:
   - title: Example Media Coverage Headline
     outlet: Example News Outlet
